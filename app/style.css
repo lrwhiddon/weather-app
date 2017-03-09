@@ -1,0 +1,192 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body{
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+#container {
+    overflow: auto;
+    padding-bottom: 30px;
+}
+footer {
+    position: relative;
+    
+    height: 30px;
+    text-align: center;
+}
+
+.row {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.day {
+    background-color: #eee;
+    width: 200px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.icon {
+    margin: 10px auto;
+    width: 180px;
+    height: 180px;
+}
+.chart {
+    margin: 30px 0;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.legend li {
+    display: inline-block;
+}
+.legend .color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}
+.legend .high {
+    background-color: red;
+}
+.legend .low {
+    background-color: #4682b4;
+}
+.legend .rain {
+    background-color: #3f9f3f;
+}
+/* LOADER BAR, taken from: http://cssload.net/en/horizontal-bars */
+#movingBallG{
+    position:relative;
+    width:192px;
+    height:15px;
+    margin:auto;
+}
+
+.movingBallLineG{
+    position:absolute;
+    left:0px;
+    top:6px;
+    height:3px;
+    width:192px;
+    background-color:rgb(50,122,181);
+}
+
+.movingBallG{
+    background-color:rgb(50,122,181);
+    position:absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:15px;
+    border-radius:7px;
+        -o-border-radius:7px;
+        -ms-border-radius:7px;
+        -webkit-border-radius:7px;
+        -moz-border-radius:7px;
+    animation-name:bounce_movingBallG;
+        -o-animation-name:bounce_movingBallG;
+        -ms-animation-name:bounce_movingBallG;
+        -webkit-animation-name:bounce_movingBallG;
+        -moz-animation-name:bounce_movingBallG;
+    animation-duration:2.08s;
+        -o-animation-duration:2.08s;
+        -ms-animation-duration:2.08s;
+        -webkit-animation-duration:2.08s;
+        -moz-animation-duration:2.08s;
+    animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+        -o-animation-direction:normal;
+        -ms-animation-direction:normal;
+        -webkit-animation-direction:normal;
+        -moz-animation-direction:normal;
+}
+
+
+
+@keyframes bounce_movingBallG{
+    0%{
+        left:0px;
+    }
+
+    50%{
+        left:177px;
+    }
+
+    100%{
+        left:0px;
+    }
+}
+
+@-o-keyframes bounce_movingBallG{
+    0%{
+        left:0px;
+    }
+
+    50%{
+        left:177px;
+    }
+
+    100%{
+        left:0px;
+    }
+}
+
+@-ms-keyframes bounce_movingBallG{
+    0%{
+        left:0px;
+    }
+
+    50%{
+        left:177px;
+    }
+
+    100%{
+        left:0px;
+    }
+}
+
+@-webkit-keyframes bounce_movingBallG{
+    0%{
+        left:0px;
+    }
+
+    50%{
+        left:177px;
+    }
+
+    100%{
+        left:0px;
+    }
+}
+
+@-moz-keyframes bounce_movingBallG{
+    0%{
+        left:0px;
+    }
+
+    50%{
+        left:177px;
+    }
+
+    100%{
+        left:0px;
+    }
+}

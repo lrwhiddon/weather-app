@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="build/styles.css">
+</head>
+<body ng-app="weatherApp" ng-controller="mainController"  ng-cloak>
+
+    <div id="wrapper">
+        <div id="container" class="container">
+
+            <h1>Forecast for L4 Digital HQ</h1>
+            
+            <!-- loading state -->
+            <div class="row center-block text-center" ng-show="loading">
+                <div id="movingBallG">
+                    <div class="movingBallLineG"></div>
+                    <div id="movingBallG_1" class="movingBallG"></div>
+                </div>               
+                <p>LOADING DATA....</p>
+            </div>
+
+            <!-- error state -->
+            <div class="row center-block text-center" ng-show="error && !loading">
+                <div class="alert alert-danger" role="alert">
+                    <p>Sorry, there was an error retrieving the data.</p>
+                </div>
+            </div>
+
+            <!-- forecast days -->
+            <div class="row" ng-hide="loading || error">
+                <daily-forecast ng-repeat="day in dailyForecast" details="day"></daily-forecast>
+            </div>
+            <p ng-show="!loading && !error"><a href="#" ng-hide="showAll" ng-click="showMore()">Show More</a></p>
+        </div>
+
+        <!-- charts -->
+        <div class="container" ng-show="!loading && !error">
+            <weather-charts></weather-charts>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="https://darksky.net/forecast/40.7127,-74.0059/us12/en">Powered by Dark Sky</a></p>
+    </footer>
+    <script src="build/vendor.bundle.js"></script>
+    <script src="build/bundle.js"></script>
+</body>
+</html>
